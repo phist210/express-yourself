@@ -17,5 +17,31 @@ def word(thingy):
     return re.findall(r'[a-z-]', thingy)
 
 
-def words(thingy):
-    return re.findall(r'[]', thingy)
+def words(thingy, count=1):
+    if count:
+        if count == len(thingy):
+            return re.findall(r'[^\s]+[^12]', thingy)
+        else:
+            return re.findall(r'[^\s]+[^12]', thingy)
+
+
+def phone_number(thingy):
+    if len(thingy) < 8:
+        return False
+    else:
+        return re.findall(r'[\d-]', thingy)
+
+
+def money(thingy):
+    return re.findall(r'^[$\d]+[^,]', thingy)
+
+
+def zipcode(thingy):
+    return re.findall(r'[\d]{5}|[\D][\d]{4}', thingy)
+
+
+def date(thingy):
+    if len(thingy) < 5:
+        return False
+    else:
+        return re.findall(r'[\d][-/]', thingy)

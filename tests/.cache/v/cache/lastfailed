@@ -1,1 +1,3 @@
-{}
+{
+  "test_extractor.py::test_emails": true
+}

@@ -49,89 +49,89 @@ def test_word():
 @xfail
 def test_words():
     """words can take an optional count argument. In case it exists, the text
-    must match that number of words."""
+    # must match that number of words."""
     assert v.words("hello")
     assert v.words("hello world")
-#     assert v.words("raggggg hammer dog")
-#     assert v.words("18-wheeler tarbox")
-#     assert v.words("hello", count=1)
-#     assert v.words("hello world", count=2)
-#     assert v.words("raggggg hammer dog", count=3)
-#     assert v.words("18-wheeler tarbox", count=2)
-#     assert not v.words("")
-#     assert not v.words("12")
-#     assert not v.words("hey !!!", count=2)
-#     assert not v.words("bar*us w!zard", count=2)
-#     assert not v.words("hello", count=2)
-#     assert not v.words("hello world", count=3)
-#     assert not v.words("raggggg hammer dog", count=1)
-#     assert not v.words("18-wheeler tarbox", count=3)
-#
-#
-# @xfail
-# def test_phone_numbers():
-#     """US phone numbers only."""
-#
-#     assert v.phone_number("919-555-1212")
-#     assert v.phone_number("(919) 555-1212")
-#     assert v.phone_number("9195551212")
-#     assert v.phone_number("919.555.1212")
-#     assert v.phone_number("919 555-1212")
-#     assert not v.phone_number("")
-#     assert not v.phone_number("555-121")
-#     assert not v.phone_number("1212")
-#     assert not v.phone_number("mobile")
-#
-#
-# @xfail
-# def test_money():
-#     """We are just concerned with dollars here."""
-#
-#     assert v.money("$4")
-#     assert v.money("$19")
-#     assert v.money("$19.00")
-#     assert v.money("$3.58")
-#     assert v.money("$1000")
-#     assert v.money("$1000.00")
-#     assert v.money("$1,000")
-#     assert v.money("$1,000.00")
-#     assert v.money("$5,555,555")
-#     assert v.money("$5,555,555.55")
-#     assert v.money("$45,555,555.55")
-#     assert v.money("$456,555,555.55")
-#     assert v.money("$1234567.89")
-#     assert not v.money("")
-#     assert not v.money("$12,34")
-#     assert not v.money("$1234.9")
-#     assert not v.money("$1234.999")
-#     assert not v.money("$")
-#     assert not v.money("31")
-#     assert not v.money("$$31")
-#
-#
-# @xfail
-# def test_zip():
-#     assert v.zipcode("63936")
-#     assert v.zipcode("50583")
-#     assert v.zipcode("48418")
-#     assert v.zipcode("06399")
-#     assert v.zipcode("26433-3235")
-#     assert v.zipcode("64100-6308")
-#     assert not v.zipcode("")
-#     assert not v.zipcode("7952")
-#     assert not v.zipcode("115761")
-#     assert not v.zipcode("60377-331")
-#     assert not v.zipcode("8029-3924")
-#
-#
-# @xfail
-# def test_date():
-#     assert v.date("9/4/1976")
-#     assert v.date("1976-09-04")
-#     assert v.date("2015-01-01")
-#     assert v.date("02/15/2004")
-#     assert not v.date("9/4")
-#     assert not v.date("2015")
+    assert v.words("raggggg hammer dog")
+    assert v.words("18-wheeler tarbox")
+    assert v.words("hello", count=1)
+    assert v.words("hello world", count=2)
+    assert v.words("raggggg hammer dog", count=3)
+    assert v.words("18-wheeler tarbox", count=2)
+    assert not v.words("")
+    assert not v.words("12")
+    # assert not v.words("hey !!!", count=2)
+    # assert not v.words("bar*us w!zard", count=2)
+    # assert not v.words("hello", count=2)
+    # assert not v.words("hello world", count=3)
+    # assert not v.words("raggggg hammer dog", count=1)
+    # assert not v.words("18-wheeler tarbox", count=3)
+
+
+@xfail
+def test_phone_numbers():
+    """US phone numbers only."""
+
+    assert v.phone_number("919-555-1212")
+    assert v.phone_number("(919) 555-1212")
+    assert v.phone_number("9195551212")
+    assert v.phone_number("919.555.1212")
+    assert v.phone_number("919 555-1212")
+    assert not v.phone_number("")
+    assert not v.phone_number("555-121")
+    assert not v.phone_number("1212")
+    assert not v.phone_number("mobile")
+
+
+@xfail
+def test_money():
+    """We are just concerned with dollars here."""
+
+    assert v.money("$4")
+    assert v.money("$19")
+    assert v.money("$19.00")
+    assert v.money("$3.58")
+    assert v.money("$1000")
+    assert v.money("$1000.00")
+    assert v.money("$1,000")
+    assert v.money("$1,000.00")
+    assert v.money("$5,555,555")
+    assert v.money("$5,555,555.55")
+    assert v.money("$45,555,555.55")
+    assert v.money("$456,555,555.55")
+    assert v.money("$1234567.89")
+    assert not v.money("")
+    # assert not v.money("$12,34")
+    # assert not v.money("$1234.9")
+    # assert not v.money("$1234.999")
+    # assert not v.money("$")
+    # assert not v.money("31")
+    # assert not v.money("$$31")
+
+
+@xfail
+def test_zip():
+    assert v.zipcode("63936")
+    assert v.zipcode("50583")
+    assert v.zipcode("48418")
+    assert v.zipcode("06399")
+    assert v.zipcode("26433-3235")
+    assert v.zipcode("64100-6308")
+    assert not v.zipcode("")
+    assert not v.zipcode("7952")
+    # assert not v.zipcode("115761")
+    # assert not v.zipcode("60377-331")
+    # assert not v.zipcode("8029-3924")
+
+
+@xfail
+def test_date():
+    assert v.date("9/4/1976")
+    assert v.date("1976-09-04")
+    assert v.date("2015-01-01")
+    assert v.date("02/15/2004")
+    assert not v.date("9/4")
+    assert not v.date("2015")
 #
 #
 # ## ADVANCED MODE BEGINS
