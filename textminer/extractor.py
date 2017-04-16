@@ -14,8 +14,4 @@ tomato. Dandelion cucumber.earthnut@pea.net peanut soko zucchini."""
 
 
 def emails(text):
-    return re.findall(r'([\s]([\w]+[\.]*)?[\w]+@+[\w]+[\.]*[\w]+[\s])', text)
-    # this definitely works.
-
-
-print(emails(text))
+    return re.findall(r'[\w]+[.]*[\w]+[@][\w]+[.][\w]{2,4}', text)

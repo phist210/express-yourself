@@ -2,15 +2,15 @@ import pytest
 import textminer.validator as v
 xfail = pytest.mark.xfail
 
-#
-# def test_binary_numbers():
-#     assert v.binary("0")
-#     assert v.binary("1")
-#     assert v.binary("01")
-#     assert v.binary("10")
-#     assert v.binary("1110100010")
-#     assert not v.binary("")
-#     assert not v.binary("911")
+
+def test_binary_numbers():
+    assert v.binary("0")
+    assert v.binary("1")
+    assert v.binary("01")
+    assert v.binary("10")
+    assert v.binary("1110100010")
+    assert not v.binary("")
+    assert not v.binary("911")
 
 
 def test_binary_even():
